@@ -11,3 +11,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*---------------------------------*/
+.contSign-in-up{
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+.contSign-in-up h2{
+  text-align: center;
+}
+
+.contSign-in-up button{
+  width: 18%;
+  height: 30px;
+  border-radius: 0.3rem;
+  border: 1px #703B09 solid;
+  align-self: center;
+  
+}
+
+.contSign-in-up button:hover{
+ background-color: #703B09;
+ color: white;
+ cursor: pointer;
+  
+}
+
+.contSign-in-up button:focus{
+  border: #703B09 1px solid;
+  outline: none;
+   
+ }
+ 
+
+.contSign-in-up form{
+  width: 40%;
+}
+
+.authInputsCont{
+  display: flex;
+  flex-direction: column;
+}
+
+.authInputsCont input{
+   height: 1.7rem;
+   margin: 0.5rem 0;
+   box-shadow: none;
+   border: 1px solid #ccc;
+   /*VAŽNO: ovaj padding služi da smanjimo contex box pa samim time da pomaknemo tekst malo desno u desno na lijevu granicu gdje bi inače počeo*/
+   padding: 0.6rem;
+ 
+ }
+
+.authInputsCont input:focus{
+ outline: none;
+ background-color: #ccc;
+ border: 1px solid #ccc;
+}
