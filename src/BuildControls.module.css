@@ -1,0 +1,102 @@
+.mainCont{
+    background-color: #CF8F2E;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 9px;
+    padding-bottom: 9px ;
+}
+
+.subCont{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2.5rem;
+    margin-top: 14px;
+    margin-bottom: 7px;
+}
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+    margin:0 4px ;
+    justify-content: space-evenly ;
+}
+
+ .sastojci div{
+ margin: 8px 0px;
+ font-weight: bold;
+} 
+
+button:focus{
+ outline: none;
+}
+
+.flexColumn button{
+    height: 1.8rem;
+    width: 5.1rem;
+    margin-top: 4px;
+    margin-bottom: 4px ;
+}
+
+
+.prviBotuni button:disabled{
+    margin-left: 17px ;
+    background-color: #AC9980;
+    border: 1px solid #7E7365 ;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.prviBotuni button:not(:disabled){
+    background-color: #8F5E1E;
+    color: white;
+    border: 1px solid #AA6817;
+    margin-left: 17px ;
+}
+
+.drugiBotuni button{
+    background-color: #D39952;
+    color: white;
+    border: 1px solid #AA6817;
+    cursor: pointer;
+}
+
+/* Klasa boutn se odnosi na onaj jedane veliki botun */
+.botun:disabled{
+    font-size: 20px;
+    padding: 14px; 
+    background-color: #C7C6C6;
+    color: #888888;
+    border: 1px solid #ccc;
+    cursor: not-allowed;
+}
+
+/*VAŽNO: ovo klasa znači primjeni ovaj stil kada botun nije disabled tj. disabled html atribut ima vrijednost false.*/
+.botun:not(:disabled){
+  animation-name: nekiBotunKliknutAni;  
+  animation-duration: 0.6s;
+  font-size: 20px;
+  padding: 14px; 
+  cursor: pointer;
+  background-color: #DAD735;
+  color: #966909;
+  border: 1px solid #966909;
+  /* Korisan pattern za box shadow x,y 2px i blur 2px i boja postvljna na istu boju koja je granica */
+  box-shadow: 2px 2px 2px #966909
+}
+
+/*Kada nije disabled i kada je hover*/
+.botun:not(:disabled):hover{
+   background-color: #A0DB41;
+   border: 1px solid #966909;
+   color: #966909;
+}
+
+@keyframes nekiBotunKliknutAni{
+    0%{transform: scale(1.0);}
+   50%{transform: scale(1.2);}
+   100%{transform:scale(1.0);}
+  
+}

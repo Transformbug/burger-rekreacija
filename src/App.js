@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import BurgerIngredient from './BurgerIngredient';
 import Auth from './Auth';
+import BuildControls from './BuildControls.js';
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
      <BurgerIngredient/>
    
         <Auth/>
-      
+       <BuildControls/>
     </div>
   );
 }

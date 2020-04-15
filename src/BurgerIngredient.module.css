@@ -88,7 +88,7 @@
   }
   
 
-.Meat {
+.meat {
     width: 80%;
     height: 8%;
     background: linear-gradient(#7f3608, #702e05);
@@ -96,7 +96,7 @@
     border-radius: 15px;
 }
 
-.Cheese {
+.cheese {
     width: 90%;
     height: 4.5%;
     margin: 2% auto;
@@ -104,7 +104,7 @@
     border-radius: 20px;
 }
 
-.Salad {
+.salad {
     width: 85%;
     height: 7%;
     margin: 2% auto;
@@ -112,9 +112,15 @@
     border-radius: 20px;
 }
 
-.Bacon {
+.bacon {
     width: 80%;
     height: 3%;
     background: linear-gradient(#bf3813, #c45e38);
     margin: 2% auto;
+}
+
+.addIngDiv{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
 }
