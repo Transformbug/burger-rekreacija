@@ -77,8 +77,9 @@ class Auth extends Component {
            <div className='authInputsCont'>
             <input type='text' placeholder='Mail Adress'  value={this.state.signUp.email} 
              onChange={(event)=>{this.setState({signUp: {email: event.target.value, password: this.state.signUp.password}})}}/>
+          
           <input type='text'  placeholder='Password' value={this.state.signUp.password} 
-           onChange={(event)=>{this.setState({signUp:{email: event.target.value, password: this.state.signUp.password}})}}/>
+           onChange={(event)=>{this.setState({signUp:{password: event.target.value, email: this.state.signUp.email}})}}/>
           <button type='submit'>Sign Up</button>
             </div>
          </form>

@@ -122,7 +122,7 @@ pošaljiNarudžbu=(event)=>{
        //  axios.post("https://react-my-burger-47b75.firebaseio.com/orders.json?auth="+orToken, order)
        //Radi se o tome da varijabla dobije već rezultat expressiona null ||'stringToken'(za slučaj kad je this.state.token null) i zato radi dok ono gori ne radi.
        //Čak radi i ovo:
-       axios.post("https://react-my-burger-47b75.firebaseio.com/orders.json?auth="+ localStorage.getItem("token") , order)
+       axios.post("https://moj-burger-e5430.firebaseio.com/orders.json?auth="+ localStorage.getItem("token") , order)
        
        .then(response=>{
            console.log('pošalji nardužbu response',response);

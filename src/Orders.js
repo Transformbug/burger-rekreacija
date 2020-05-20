@@ -26,7 +26,7 @@ class Orders extends Component {
         let token= this.props.token || localStorage.getItem('token')
         let userId=this.props.userId || localStorage.getItem('userId')
        
-        axios.get(`https://react-my-burger-47b75.firebaseio.com/orders.json?auth=${token}&orderBy="userId"&equalTo="${userId}"`)
+        axios.get(`https://moj-burger-e5430.firebaseio.com/orders.json?auth=${token}&orderBy="userId"&equalTo="${userId}"`)
         .then((response)=>{
            
             let dataObj=response.data

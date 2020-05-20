@@ -27,8 +27,8 @@ const sendSignInAndUpForm=(event,stateInAuth,promjeniStateInAuth)=>{
         }
        promjeniStateInAuth()
        let url=null;
-       option==='signIn' ? url='https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBtIEtssRnACoK6EfYc692lET2-NQhkLSM'
-                               : url='https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBtIEtssRnACoK6EfYc692lET2-NQhkLSM'
+       option==='signIn' ? url='https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCO_a67TelpSzFq6GnzRztYuUHfnFc2vek'
+                               : url='https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCO_a67TelpSzFq6GnzRztYuUHfnFc2vek'
        axios.post(url,authData)
        .then((response)=>{
         
