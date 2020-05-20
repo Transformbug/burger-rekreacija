@@ -12,23 +12,26 @@ code {
     monospace;
 }
 
-/*---------------------------------*/
+/*--------------Auth.js componenta-------------------*/
 .contSign-in-up{
   display: flex;
   justify-content: space-evenly;
+  margin-top: 50px;
   
 }
 
 .contSign-in-up h2{
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .contSign-in-up button{
-  width: 18%;
+  width: 90px;
   height: 30px;
   border-radius: 0.3rem;
   border: 1px #703B09 solid;
   align-self: center;
+  white-space: nowrap;
   
 }
 
@@ -48,6 +51,7 @@ code {
 
 .contSign-in-up form{
   width: 40%;
+  margin: 8px 0;
 }
 
 .authInputsCont{
@@ -70,3 +74,64 @@ code {
  background-color: #ccc;
  border: 1px solid #ccc;
 }
+
+@media(max-width: 600px){
+  .contSign-in-up{
+    flex-direction: column;
+    align-items: center;
+    margin: 8px 0;
+  }
+
+}
+
+
+@media(max-width: 600px){
+  .contSign-in-up form{
+    
+    margin: 22px 0;
+  }
+
+}
+
+
+/*----- Ovo je za NavLink, ovo je baš morabilo biti ovdje jer css module automski dodaju nešto voome active ako stavimo tamo----------------- */
+
+.active{
+  background-color: #8F5C2C;
+  /* Odustao sam na kraju od ove ružne granice, overwirtana je pa ne bude aktivna, zato sam je ostavio */
+  border-bottom: 4px solid #40A4C8;
+  
+
+ }   
+
+ @media (max-width: 499px){
+  .active {
+     border-bottom: 1px solid transparent;
+     background-color: white;
+     color: #40A4C8 !important;
+  }
+ }
+
+ /*----------------------------------*/
+
+.backdrop{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.25);
+  position:fixed;
+  top: 0;
+  left:0;
+  z-index: 1; 
+}
+
+.displayNoneGeneralno{
+ display: none;
+}
+
+/*----------------------------------------------------*/
+.zaSpinnerContUAuth{
+  margin-top: 180px;
+}
+
+
+ 

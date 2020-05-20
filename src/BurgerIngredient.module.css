@@ -1,7 +1,11 @@
 .box{
     width: 500px;
     margin: 0 auto;
+    margin-top: 5rem;
     height: 450px;
+  /* VAŽNO: ovo znači da će se overflow bar pojaviti tek kad se dogoditi overflow.Inače se ne bi pojavlie automatski */
+   overflow: auto;
+     
 }
 
 .BreadBottom {
@@ -124,3 +128,17 @@
     font-weight: bold;
     text-align: center;
 }
+
+@media (max-width: 500px){
+    .box{
+        width: 300px;
+        height: 35vh;
+    }
+}
+
+@media (max-height: 600px){
+    .box{
+       margin-top: 20px;
+    }
+}
+

@@ -1,0 +1,39 @@
+ input{
+    height: 1.7rem;
+    margin: 0.5rem 0;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    /*VAŽNO: ovaj padding služi da smanjimo contex box pa samim time da pomaknemo tekst malo desno u desno na lijevu granicu gdje bi inače počeo*/
+    padding: 0.6rem;
+  
+  }
+ 
+input:focus{
+  outline: none;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+ }
+
+ //VAŽNO:Ovo nije radilo dok nisam stavio: focus iako je ova klasa naravno jača u specificity od gori input botuna. Problem je ova gori input:focus pseudoKlasa i radi toga
+ //tek ovo radi kad pseudo klasa i klasa nadjačaju gornju pseudo klasu i obični element slektor...  
+ .focusOnlyRedBorder:focus{
+  border: 1px solid red;
+ }
+
+ .notActiveAnymoreAndInvaild:not(:focus){
+ background-color: #FDA49A;
+ }
+
+ .zaFokusSelect:focus{
+     outline: none;
+     background-color: #ccc;
+     border: 1px solid #ccc
+ }
+
+ .zaFokusSelect *:focus{
+    outline: none;
+    background-color: #ccc;
+  
+}
+
+

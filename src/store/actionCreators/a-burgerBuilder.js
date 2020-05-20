@@ -18,5 +18,19 @@ const addIngredient=(event)=>{
 }
 }
 
+const restartBurgerAfterOrder=()=>{
+  return{
+    type: actionTypes.RESTART_BURGER,
+    ingredients:{
+      salad: 0,
+      bacon: 0,
+      cheese: 0,
+      meat: 0
+     },
+     totalPrice: 4
+  }
 
- export default {addIngredient, removeIngredient}
+}
+
+
+ export default {addIngredient, removeIngredient, restartBurgerAfterOrder}

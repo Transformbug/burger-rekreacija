@@ -1,0 +1,57 @@
+.formCont{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 100px auto;
+    align-items: center;
+    box-shadow: 0 2px 2px #ccc;
+      
+    @media (max-width: 500px) and (orientation: portrait) {
+        width: 90%;
+        margin: 50px auto;       
+    }
+
+       
+    @media (max-width: 768px) and (orientation: landscape) {
+        width: 80%;
+        margin: 10px auto;       
+    }
+
+}
+  
+h3{
+    text-align: center;
+}
+
+.formCont *{
+    margin: 10px 0;
+    height: 30px;
+    align-self: stretch;
+       
+    @media (max-width: 768px) and (orientation: landscape) {
+      margin: 2px 0;       
+    }
+
+}
+
+
+
+.botun:disabled{
+  color: #ccc;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.botun:not(:disabled){
+    width: 50px;
+   cursor: pointer;
+    border: none;
+    font-weight: bold;
+    color: #5C9210;
+    font-size: 20px;
+    align-self: center;
+    margin: 15px 0;
+}
+

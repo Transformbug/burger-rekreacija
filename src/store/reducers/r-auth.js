@@ -3,7 +3,8 @@ import actionTypes  from '../randomRedux/actionTypes.js';
 const intialState={
     signedIn: false,
     token: null,
-    userId: null
+    userId: null,
+    loadingStatus: false
 }
 
 
@@ -14,7 +15,10 @@ const intialState={
     switch (action.type) {
        case actionTypes.AUTH_SUCCESS:
        return {...state, token: action.token, userId: action.userId, signedIn: action.signedIn }
- 
+       case actionTypes.LOGOUT:
+       return {...state, token: action.token, userId: action.userId, signedIn: action.signedIn}
+       case actionTypes.LOADING_STATUS: 
+       return {...state, loadingStatus: action.value}  
          default:
            return {...state}
            

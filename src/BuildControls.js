@@ -9,10 +9,31 @@ import {connect} from 'react-redux';
 import actions from './store/actionCreators/a-burgerBuilder';
 // console.log('ovo je actions', actions);
 
+import YourOrderPopUp from './YourOrderPopUp';
+
 class BuildControls extends Component {
+
+    state={
+        popUpActive: false
+    }
+
+    changeYourOrderPopUp(boolean){
+        
+        this.setState({popUpActive: boolean})
+    }
 
     render() {
         return (
+            <React.Fragment>
+        <YourOrderPopUp 
+          popUpActive={this.state.popUpActive}
+          ingredients={this.props.ingredients}
+          totalPrice={this.props.totalPrice}
+          //VAŽNO:Ovdje mi se dogodilo da se izguvio contex this.setStatešto je razumljivo na načina kako unutar YourOrderPopUP zovem ovu fn. koju šaljem.
+          //NaravNO da je bitno ovdje bilo bindat, ne tamo jer ovdje this još zadržavo ono što želimo 
+          changeYourOrderPopUp={this.changeYourOrderPopUp.bind(this)}
+          historyOdRoutera={this.props.history}/>
+           
             <div className={styles.mainCont}>
                  <div>Current Price: <strong>{`${this.props.totalPrice.toFixed(2)}$`}</strong></div>
                 <div className={styles.subCont}>
@@ -52,10 +73,13 @@ class BuildControls extends Component {
                     </div>
                   
                 </div>
-                <button className={styles.botun} disabled={this.props.totalPrice>4? false: true}>SIGN UP TO ORDER</button>
+        <button className={styles.botun} 
+        disabled={this.props.totalPrice>4? false: true}
+        onClick={this.props.signedIn? ()=>{this.changeYourOrderPopUp(true)}: ()=>this.props.history.push('/auth')}>{this.props.signedIn?'ORDER NOW': 'SIGN UP TO ORDER'}</button>
 
                 
             </div>
+            </React.Fragment>
         );
     }
 }
@@ -63,7 +87,8 @@ class BuildControls extends Component {
 let mapStateToProps=(state)=>{
   return{
    totalPrice: state.burgerBuilder.totalPrice,
-   ingredients:state.burgerBuilder.ingredients
+   ingredients:state.burgerBuilder.ingredients,
+   signedIn: state.auth.signedIn
   }
 }
 

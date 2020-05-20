@@ -1,0 +1,35 @@
+.noShow{
+    display: none;
+}
+
+.showCont{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); 
+  width: 500px;
+  height: 150px;
+  border: 1px solid white;
+  box-shadow: 1px 1px 1px #ccc;
+  z-index: 10;
+  padding: 15px;
+  text-align: center;
+  background-color: white;
+}
+
+.showCont h2{
+    text-align: center;
+}
+
+.showCont *{
+    margin: 7px 0;
+}
+
+.botun{
+    background-color: #703B09;
+    color: white;
+    width: 70px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #703B09;
+}

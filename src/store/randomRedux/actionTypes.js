@@ -1,6 +1,13 @@
 const ADD_INGREDIENT='ADD_INGREDINET'
 const REMOVE_INGREDIENT='REMOVE_INGREDIENT'
 const AUTH_SUCCESS='AUTH_SUCCESS'
+const LOGOUT='LOGOUT'
+const LOADING_STATUS='LOADING_STATUS'
+const RESTART_BURGER='RESTART_BURGER'
 export default {ADD_INGREDIENT,
                 REMOVE_INGREDIENT,
-                AUTH_SUCCESS}
+                AUTH_SUCCESS,
+                LOGOUT,
+                LOADING_STATUS,
+                RESTART_BURGER
+            }

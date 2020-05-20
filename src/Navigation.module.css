@@ -1,0 +1,103 @@
+.glavniCont{
+    display: flex;
+    height: 60px;
+    background-color: #703B09;
+   justify-content: space-between;
+}
+
+
+
+img{
+   height: 100%; 
+}
+
+
+ .divUnutarNaviKomp a{
+    align-self: stretch;
+    text-decoration: none;
+    color: white;
+    /* VAŽNO: stalno mi je tekst skakao kad bi odjednom dodao debelu granicu na dnu kad je link aktivan. Ovako sa transperent i solid sam postigao da oba dva imaju stalnu tu granicu
+    i onda kada se automski doda active klasa(index.css) samo umjesto tranperent imamo plavu boju */
+    border: 4px solid transparent;
+    margin: 0 3px;
+    padding:0 5px;
+    /* VAŽNO: ovdje sam dodao flex na ovaj element samo da centriamo text po sredini. Tamo u index.css sam dodao klasu klasu active koju dobije svaki NavLink automaski.
+    Dodao sam to tamo jer da ovdje dodam active webpack bi automski dodano posebni hash toj klasi jer ovo css module. Tamo sam ovom flex contienru koji je ujedno
+    i flex item dodao border-bottom i tako je sad ona podebljana granici na samom dnu ovoga headera.*/
+    display: flex;
+    align-items: center;
+    
+   }
+
+   .divUnutarNaviKomp{
+       display: flex;
+       height: 100%;
+   }
+
+   .mobTipkaCont div{
+    background-color: white;
+    margin: 7px 0px;
+    width: 34px;
+    height: 3px;
+  }
+
+  .prikažiMobTipka{
+      display: none;
+  }
+
+  .prikažiNavi{
+      display: block;
+  }
+
+  .prikažiSlika{
+     display: block;
+     padding: 8px;
+     background-color: white;
+     height: 81%;
+     margin-top: 5px;
+     margin-left: 12px;
+  }
+
+ 
+
+   @media (max-width: 499px){
+    .lijeviCont{
+    
+        background-color: #703B09;
+       
+       
+       } 
+  
+   }
+
+   @media (max-width: 499px){
+    .desniCont {
+        padding: 0.4rem;
+        background-color: white;
+        margin-right: 18px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+   }
+
+   @media (max-width: 499px){
+    .prikažiMobTipka{
+        display: flex;
+        align-items: center;
+        margin-left: 12px ;
+    }
+   }
+
+   @media (max-width: 499px){
+    .prikažiNavi{
+        display: none;
+    }
+   }
+
+
+  
+   @media (max-width: 499px){
+    .prikažiSlika{
+        margin-right: 12px;
+    }
+   }

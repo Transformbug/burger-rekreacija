@@ -1,0 +1,62 @@
+.displayNone{
+    display: none;
+}
+
+.glavniCont{
+  height: 100vh;
+  width: 60vw;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  padding: 15px;
+  padding-top: 35px;
+}
+
+.logoSlikaCont{
+  height: 65px;
+ 
+}
+
+img{
+  height: 100%;
+}
+
+.navLinkCont{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navLinkCont a{
+   text-decoration: none;
+   margin: 2px 0;
+   color: #8F5C2C;
+
+}
+
+.logOut{
+  text-decoration: none;
+  margin: 2px 0;
+  color: #8F5C2C;
+}
+
+.zatvoriX{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 30px;
+    color: red;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* VAŽNO: ovo služi za slučaj kada se na desktopu otvori SideDrawer i onda ako se opet poveća viewport i ne zatovorim sideDrawer želimo ovdje maknuti sideDrawer iz UI bez da promjenmio state 
+pa će se sideDrawer ponovno vidjeti kad se vratimo ispod 500px širine */
+@media (min-width: 499px){
+    .glavniCont{
+        display: none;
+    }
+}

@@ -42,6 +42,8 @@ const ingredientPrices={
        //VAŽNO: kad ovdje ne returnam incijalni state kad se loada prvi put error, onda mi this.props.ingredinets untar disabled prop-a u BuildControls.js returna error.
        //JAKO VAŽNO: dogodio mi se bio error, gdje iz nekoga razloga činilo se da redux state laže, ali problem je bio u tome što sam ubaciavao ...intialState umjesto ...state.
        //Jasno je da onda neću imati najnovijei redux state...
+       case actionTypes.RESTART_BURGER:
+         return {...state, ingredients: action.ingredients, totalPrice: action.totalPrice}
          default:
            return {...state}
            

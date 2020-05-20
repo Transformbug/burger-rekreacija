@@ -1,0 +1,90 @@
+.glavniContNaČekanju{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-350%);
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    height: 340px;
+    margin: 0 auto;
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+
+    @media (max-width: 600px) and (orientation: landscape) {
+        width: 290px;
+        height: 280px;
+
+     }
+
+     @media (max-width: 500px) and (orientation: portrait) {
+        width: 300px;
+        height: 320px;
+        //Ovo mi je pokriva close botun sidedrawera dok nisam ga još gore maknio. Bilo je to nevidljvo golim okom radi opacity, treba paziti...
+        transform: translate(-50%,-350%)
+   }
+
+
+ }
+
+
+//Ne mičemo ovo gornju klasu, samo ćemo dodati ovu klasu i pošto je veći specificity jer je napisana ispod onda će se properties koji su ovdje navedeni biti overwiritani.
+.glavniContActive{
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+//Ovim slektorm biram sve element unutar ovoga containera koji su izravni nasljednici.
+.glavniContNaČekanju > *{
+    margin: 14px 0;
+   
+    @media (max-width: 600px){
+        margin: 7px 0 ;
+   }
+}
+
+.ulKlasa{
+    margin-left: 50px;
+    line-height: 19px;
+}
+
+.h3Klasa{
+   text-align: center;
+    margin-bottom: 15px;
+    @media (max-width: 600px) and (orientation: landscape) {
+        margin: 0;
+    
+     }
+}
+
+.divZaBotune{
+    margin: 40px 0;
+    @media (max-width: 600px) and (orientation: landscape) {
+        margin: 0;
+    
+     }
+
+}
+
+.divZaBotune *{
+  box-shadow: none;
+  border: none; 
+  color: #944317; 
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: white;
+  
+}
+
+.divZaBotune button:nth-child(2){
+ margin: 0 45px;
+ color: #5C9210;
+ background-color: white;
+ @media (max-width: 600px) and (orientation: landscape) {
+    margin: 0 12px;
+
+ }
+}

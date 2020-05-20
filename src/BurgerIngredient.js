@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './BurgerIngredient.module.css';
 import {connect} from 'react-redux';
+import Strelica from './Strelica';
 
 class BurgerIngredient extends Component {
 
@@ -38,7 +39,7 @@ class BurgerIngredient extends Component {
                 </div>
                 {ingredients.length>0? ingredients : <div className={styles.addIngDiv}>Please start adding Ingredients !!!</div>}
                  <div className={styles.BreadBottom}></div>
-                
+                <Strelica/>
             </div>
         );
     }

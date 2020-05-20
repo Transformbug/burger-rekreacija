@@ -4,7 +4,11 @@
     align-items: center;
     flex-direction: column;
     padding-top: 9px;
-    padding-bottom: 9px ;
+    padding-bottom: 25px ;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
 }
 
 .subCont{
@@ -12,7 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 2.5rem;
+    padding: 0 2rem;
     margin-top: 14px;
     margin-bottom: 7px;
 }
@@ -99,4 +103,14 @@ button:focus{
    50%{transform: scale(1.2);}
    100%{transform:scale(1.0);}
   
+}
+
+@media (max-height: 500px){
+
+    .mainCont{
+       position: static;
+       
+    
+    }
+
 }

@@ -1,0 +1,45 @@
+.glavniCont{
+  width: 80%;
+  margin: 0 auto;
+  border: none;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 30px 0;
+  //VAŽNO: pitaomo sam se kako maknuti desnu granicu koja se ovdje pojavi, to je bilo radi box-showdow-a tj. kad je bila vrijednost na prvom propertyu
+  box-shadow: 0 3px 4px #ccc;
+  @media (max-width: 500px) and (orientation: portrait) {
+    width: 97%;
+   
+}
+
+  
+}
+
+.prviRed{
+    display: flex;
+    align-items: center;
+}
+
+.prviRed > *{
+    margin: 0 5px;
+    padding: 4px;
+    border: 1px solid #ccc;
+   
+    @media (max-width: 500px) and (orientation: portrait) {
+        margin: 0 1px;
+       
+    }
+
+}
+
+//VAŽNO:Ovo radi tek kad je odvojeno u ovom slučaju jer ciljam prvi elment unutar ovoga .prviRed
+.prviRed :nth-child(1){
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+.drugiRed {
+   margin-top: 8px;
+}
+
