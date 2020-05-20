@@ -8,14 +8,12 @@ import './index.css';
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
 import burgerBuilderReducer from './store/reducers/r-burgerBuilder';
-import orderReducer from './store/reducers/r-order';
 import authReducer from './store/reducers/r-auth';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer=combineReducers({
     burgerBuilder: burgerBuilderReducer,
-    order: orderReducer,
     auth: authReducer
 })
 
